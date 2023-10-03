@@ -1,0 +1,2 @@
+# WorldSkillsPreparing
+Speedtest code
