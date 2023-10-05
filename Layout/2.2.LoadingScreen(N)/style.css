@@ -1,0 +1,50 @@
+.green{
+    background-color: #19A68C;
+    top: 0;
+    right: 0;
+
+}
+.red{
+    top: 0;
+    left: 0;
+    background-color: #F63D3A;
+}
+.black{
+    background-color: #193B48;
+    bottom: 0;
+    right: 0;
+}
+.yellow{
+    background-color: #FDA543;
+    bottom: 0;
+    left: 0;
+}
+.load{
+    margin-left: 50%;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    animation: loading 2s linear infinite;
+}
+.r{
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    position: absolute;
+    
+}
+@keyframes loading {
+    0%{
+       transform: rotate(0);
+       scale: 0.5;
+    }
+    50%{
+        scale: 1;
+    }
+    100%{
+        scale: 0.5;
+        transform: rotate(360deg);
+    }
+}
