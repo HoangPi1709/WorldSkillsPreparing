@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="box">
+            <div class="rectangle">
+                <div class="set-border">
+                    <p>Border radius</p>
+                    <div>
+                        <input type="number" name="rounded" placeholder="vd: 1" style="padding-left: 4px" />
+                        <span>px</span>
+                    </div>
+                </div>
+                <div class="set-box-shadow">
+                    <span>Box shadow</span>
+                    <select name="type" id="type">
+                        <option value="">default</option>
+                        <option value="inset">inset</option>
+                        <option value="none">none</option>
+                    </select>
+                    <div>
+                        <input
+                            type="number"
+                            class="input-shadow"
+                            name="x"
+                            placeholder="vd: 1"
+                            style="padding-left: 4px"
+                        />
+                        <span>x</span>
+                    </div>
+                    <div>
+                        <input
+                            type="number"
+                            class="input-shadow"
+                            name="y"
+                            placeholder="vd: 1"
+                            style="padding-left: 4px"
+                        />
+                        <span>y</span>
+                    </div>
+                    <div>
+                        <input
+                            type="number"
+                            class="input-shadow"
+                            name="blur"
+                            placeholder="vd: 1"
+                            style="padding-left: 4px"
+                        />
+                        <span>blur</span>
+                    </div>
+                    <div>
+                        <input
+                            type="number"
+                            class="input-shadow"
+                            name="spread"
+                            placeholder="vd: 1"
+                            style="padding-left: 4px"
+                        />
+                        <span>spread</span>
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            class="input-shadow"
+                            name="color"
+                            placeholder="vd: #000"
+                            style="padding-left: 4px"
+                        />
+                        <span>color</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const rectangle = document.querySelector('.rectangle');
+        const rounded = document.querySelector('input[name="rounded"]');
+        const inputShadows = document.querySelectorAll('.input-shadow');
+        const type = document.querySelector('select[name="type"]');
+        const x = document.querySelector('input[name="x"]');
+        const y = document.querySelector('input[name="y"]');
+        const blurI = document.querySelector('input[name="blur"]');
+        const spread = document.querySelector('input[name="spread"]');
+        const color = document.querySelector('input[name="color"]');
+        rounded.onchange = () => {
+            rectangle.style.borderRadius = `${rounded.value}px`;
+        };
+        const handleBoxShadow = () => {
+            if (type.value === 'none') {
+                inputShadows.forEach((element) => (element.disabled = true));
+            } else {
+                inputShadows.forEach((element) => (element.disabled = false));
+                rectangle.style.boxShadow = `${type.value} ${x.value}px ${y.value}px ${blurI.value}px ${spread.value}px ${color.value}`;
+            }
+        };
+        type.onchange = handleBoxShadow;
+        inputShadows.forEach((element) => (element.onchange = handleBoxShadow));
+    </script>
+</html>

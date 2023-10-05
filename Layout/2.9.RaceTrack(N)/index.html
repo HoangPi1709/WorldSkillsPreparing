@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Đường đua 8</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 20px;
+                box-sizing: border-box;
+            }
+            .track-outer {
+                position: relative;
+                width: 200px;
+                border-radius: 99px;
+            }
+            .track {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 2px black dotted;
+            }
+            .track.track1 {
+                border-bottom-left-radius: 0;
+                transform: rotate(-45deg);
+                margin-bottom: 81px;
+            }
+            .track.track2 {
+                margin-top: 65px;
+                border-top-right-radius: 0;
+                transform: rotate(-45deg);
+            }
+            .car {
+                width: 20px;
+                height: 20px;
+                background-color: red;
+                position: absolute;
+                border-radius: 50%;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%) translateY(50%);
+                animation: racetrackAnimation 1s linear infinite;
+            }
+            @keyframes racetrackAnimation {
+                0% {
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                5% {
+                    left: 87%;
+                    bottom: 7%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                10% {
+                    left: 95%;
+                    bottom: 18%;
+                    transform: translateX(-10%) translateY(50%);
+                }
+                15% {
+                    left: 90%;
+                    bottom: 30%;
+                    transform: translateX(-10%) translateY(50%);
+                }
+                20% {
+                    left: 70%;
+                    bottom: 40%;
+                    transform: translateX(-10%) translateY(50%);
+                }
+                25% {
+                    left: 50%;
+                    bottom: 50%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                30% {
+                    left: 25%;
+                    bottom: 60%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                35% {
+                    left: 2%;
+                    bottom: 75%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                40% {
+                    left: 7%;
+                    bottom: 90%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                45% {
+                    left: 20%;
+                    bottom: 96%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                50% {
+                    left: 50%;
+                    bottom: 100%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                55% {
+                    left: 90%;
+                    bottom: 90%;
+                    transform: translateX(-50%) translateY(0%);
+                }
+                60% {
+                    left: 100%;
+                    bottom: 75%;
+                    transform: translateX(-50%) translateY(0%);
+                }
+                65% {
+                    left: 90%;
+                    bottom: 65%;
+                    transform: translateX(-50%) translateY(0%);
+                }
+                70% {
+                    left: 70%;
+                    bottom: 56%;
+                    transform: translateX(-50%) translateY(0%);
+                }
+                75% {
+                    left: 50%;
+                    bottom: 50%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+                80% {
+                    left: 25%;
+                    bottom: 38%;
+                    transform: translateX(-50%) translateY(0%);
+                }
+                85% {
+                    left: 0%;
+                    bottom: 22%;
+                    transform: translateX(-50%) translateY(0%);
+                }
+                90% {
+                    left: 7%;
+                    bottom: 8%;
+                    transform: translateX(-50%) translateY(0%);
+                }
+                95% {
+                    left: 20%;
+                    bottom: 2%;
+                    transform: translateX(-50%) translateY(0%);
+                }
+                100% {
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%) translateY(50%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="track-outer">
+            <div class="track track1"></div>
+            <div class="track track2"></div>
+            <div class="car"></div>
+        </div>
+    </body>
+</html>
