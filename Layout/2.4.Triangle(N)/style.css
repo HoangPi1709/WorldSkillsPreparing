@@ -1,0 +1,20 @@
+.triangle {
+    width: 300px;
+    height: 300px;
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+    background-color: blue;
+    animation: triangle-to-square 4s infinite;
+}
+@keyframes  triangle-to-square{
+    0%{
+        clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+    }
+    50%{
+        background-color: yellow;
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    100%{
+        clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+        
+    }
+}

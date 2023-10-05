@@ -1,0 +1,9 @@
+.image {
+    width: 300px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.image:hover {
+    filter: grayscale(0%);
+}
