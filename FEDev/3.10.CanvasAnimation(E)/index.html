@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.10.CanvasAnimation(E)</title>
+</head>
+
+<body>
+    <canvas style="background-color: green;" id="myCanvas" width="400" height="320"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let x = 0;
+        const y = canvas.height / 2;
+        const radius = 10;
+
+        setInterval(function(){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = '#fff';
+            ctx.fill();
+
+            x += 5;
+            if (x > canvas.width + radius) {
+                x = -radius;
+            }
+        }, 50);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3.DrawingCanvas(N)</title>
+    <style>
+        .btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .btn-group{
+            margin-top: 10px;
+            display: flex;
+            width: 400px;
+            justify-content: space-evenly;
+        }
+        .btn-red {
+            background-color: red;
+        }
+
+        .btn-green {
+            background-color: green;
+        }
+
+        .btn-blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <div class="btn-group">
+        <div onclick="setColor(0)" class="btn btn-red"></div>
+        <div onclick="setColor(1)" class="btn btn-green"></div>
+        <div onclick="setColor(2)" class="btn btn-blue"></div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        const btnGroup = document.querySelectorAll('.btn');
+        
+        let isDrawing = false;
+        let colorIndex = 0;
+        const colors = ['red', 'green', 'blue'];
+
+        canvas.style.border = "solid 1px black";
+        function startDrawing(e) {
+            isDrawing = true;
+            ctx.beginPath();
+            ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+
+            ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+            ctx.strokeStyle = colors[colorIndex];
+            ctx.stroke();
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+        function delBorder(){
+            btnGroup.forEach(e => {
+               e.style.outline = ""; 
+            });
+        }
+        function setColor(indexColor) {
+            delBorder();
+            btnGroup[indexColor].style.outlineOffset = "2px";
+            btnGroup[indexColor].style.outline = "2px solid black";
+            colorIndex = indexColor;
+        }
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseleave', stopDrawing);
+        
+    </script>
+
+</body>
+
+</html>
