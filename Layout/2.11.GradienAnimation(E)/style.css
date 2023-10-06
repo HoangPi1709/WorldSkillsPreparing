@@ -1,0 +1,50 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+input,
+select,
+textarea {
+    background-color: transparent;
+    outline: none;
+}
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+body {
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.gradient {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ff0000, #00ff00);
+    animation: gradient-shift 1s 2 linear;
+}
+@keyframes gradient-shift {
+    from {
+        background: linear-gradient(to right, #ff0000, #00ff00);
+    }
+    to {
+        background: linear-gradient(to top, #ff0000, #00ff00);
+    }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Video player interface</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="header__inner">
+                    <div class="search">
+                        <input type="text" class="search__input" placeholder="Tìm kiếm" />
+                        <button class="search__btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-miterlimit="10"
+                                    stroke-width="32"
+                                    d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z"
+                                />
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                    stroke-width="32"
+                                    d="M338.29 338.29L448 448"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="browse-screen">
+                    <div class="video-play">
+                        <video src="./src/video2.mp4" id="video" controls></video>
+                    </div>
+                    <div class="info">
+                        <h1 class="video-title">LUFFY GEAR 5 TRANSFORMATION - ONE PIECE EPISODE 1071</h1>
+                        <div class="description">
+                            <p class="view">10.000 lượt xem</p>
+                            <div class="description-content">
+                                One Piece Film Red kể về câu chuyện của Uta, cô ca sĩ nổi tiếng nhất thế giới. Cô sẽ tổ
+                                chức buổi biểu diễn âm nhạc khổng lồ của mình tại đảo âm nhạc Elegia và sẽ thu hút rất
+                                nhiều người. Trong đó có cả băng Mũ Rơm, hải tặc, hải quân, đặc biệt khi Uta là con gái
+                                của Tứ Hoàng Shanks Tóc Đỏ và cũng là người bạn của Luffy thuở ấu thơ.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-comment">
+                        <p class="total-comment">6 bình luận</p>
+                        <input type="text" placeholder="Bình luận trên tài khoản Ánh Nguyễn" class="input-comment" />
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="user">
+                                    <h3 class="user__name">Nga ngố</h3>
+                                    <p>2 giờ trước</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32">
+                                        <path
+                                            fill="currentColor"
+                                            d="M28.59 13.31L30 11.9L20 2l-1.31 1.42l1.18 1.18l-11.49 9.72l-1.72-1.71L5.25 14l5.66 5.68L2 28.58L3.41 30l8.91-8.91L18 26.75l1.39-1.42l-1.71-1.71l9.72-11.49ZM16.26 22.2L9.8 15.74L21.29 6L26 10.71Z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="comment-content">
+                                    Phim này chắc chắn có những phân cảnh buồn vui lẫn lộn mang đến cho cảm xúc cho
+                                    người xem sự phấn khích và sự cảm động , cho dù bản thân mình chưa xem phim này
+                                </div>
+                            </div>
+                            <div class="comment__item">
+                                <div class="user">
+                                    <h3 class="user__name">Luffy</h3>
+                                    <p>3 phút trước</p>
+                                </div>
+                                <div class="comment-content">
+                                    Khi về rạp thì mình nghĩ nên sub cả nhạc phim, Phim lần này nhạc chiếm thời lượng
+                                    rất lớn, để mọi người không hiểu Uta hát gì, giống như là phí đi 1/3 tiền vé vậy.
+                                </div>
+                            </div>
+                            <div class="comment__item">
+                                <div class="user">
+                                    <h3 class="user__name">Kinemon</h3>
+                                    <p>8 giờ trước</p>
+                                </div>
+                                <div class="comment-content">
+                                    Chờ đợi siêu phẩm này lâu lắm rồi, nhất định phải đi coi thôi
+                                </div>
+                            </div>
+                            <div class="comment__item">
+                                <div class="user">
+                                    <h3 class="user__name">Nga ngố</h3>
+                                    <p>2 giờ trước</p>
+                                </div>
+                                <div class="comment-content">
+                                    Hóng từng ngày được phát ở Việt Nam, SẮP ĐƯỢC ĐI XEM RỒI 😁😁😁😁
+                                </div>
+                            </div>
+                            <div class="comment__item">
+                                <div class="user">
+                                    <h3 class="user__name">Nguyen Truong</h3>
+                                    <p>2 giờ trước</p>
+                                </div>
+                                <div class="comment-content">
+                                    Trong cái tuyệt phẩm này chắc băng Shanks vẫn đánh ít như mọi khi, băng Luffy vẫn
+                                    đánh nhiều như mọi khi chăng?
+                                </div>
+                            </div>
+                            <div class="comment__item">
+                                <div class="user">
+                                    <h3 class="user__name">Tùng</h3>
+                                    <p>2 giờ trước</p>
+                                </div>
+                                <div class="comment-content">
+                                    Dòng thời gian lúc ở 1 tỷ 5 hay 3 tỉ thế ae, 3 tỉ đập nhau cho nó sướng.
+                                </div>
+                            </div>
+                            <div class="comment__item">
+                                <div class="user">
+                                    <h3 class="user__name">Zoro</h3>
+                                    <p>2 giờ trước</p>
+                                </div>
+                                <div class="comment-content">
+                                    Nếu movie này nằm trong mạch truyện chính thì lù lúc này đã đập xong kaido chưa ae
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <h5 class="playlist__title">Danh sách phát</h5>
+                    <a href="./index.html">
+                        <div class="playlist__item">
+                            <img
+                                src="https://akcdn.detik.net.id/visual/2021/11/22/one-piece-red_169.png?w=650"
+                                alt=""
+                                srcset=""
+                                class="thumbnail"
+                            />
+                            <div class="info">
+                                <h2>Phim "One Piece Film Red" Trailer | KC 25.11.2022</h2>
+                                <p class="info__foot">
+                                    <span>1.000 lượt xem</span>
+                                    <span class="time">2 tháng trước</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="playlist__item">
+                        <img
+                            src="https://i.ytimg.com/vi/CUyesRLFKN0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDH_TO7ByT0dV_kSTb3repuWO9NvQ"
+                            alt=""
+                            srcset=""
+                            class="thumbnail"
+                        />
+                        <div class="info">
+                            <h2>Javascript | Hướng dẫn code Accordion Component</h2>
+                            <p class="info__foot">
+                                <span>1.450 lượt xem</span>
+                                <span class="time">8 tháng trước</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="playlist__item">
+                        <img
+                            src="https://i.ytimg.com/vi/kPOUE_EGyLc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDgp8tmSi_Xu5lTc5oiSPic3K0SOw"
+                            alt=""
+                            srcset=""
+                            class="thumbnail"
+                        />
+                        <div class="info">
+                            <h2>Bạn đã biết cách Responsive với Container Query chưa ?</h2>
+                            <p class="info__foot">
+                                <span>6.000 lượt xem</span>
+                                <span class="time">10 giờ trước</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="playlist__item">
+                        <img
+                            src="https://i.ytimg.com/vi/PNu-lyOH7bk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7FW65NXmcmKXN-Yudp8wQWg_XWw"
+                            alt=""
+                            srcset=""
+                            class="thumbnail"
+                        />
+                        <div class="info">
+                            <h2>
+                                24K.RIGHT thống trị sân khấu kết hợp cùng Sofia Truy Lùng Bảo Vật | Rap Việt Live Stage
+                            </h2>
+                            <p class="info__foot">
+                                <span>100.000 lượt xem</span>
+                                <span class="time">1 năm trước</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
