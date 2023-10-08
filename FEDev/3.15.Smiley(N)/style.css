@@ -1,0 +1,145 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+input,
+select,
+textarea {
+    background-color: transparent;
+    outline: none;
+}
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+body {
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: rgb(24, 108, 254);
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 24px;
+    margin: 8px;
+    border: 1px #fff solid;
+}
+
+button:hover {
+    color: rgb(24, 108, 254);
+    background-color: #fff;
+    border: 1px rgb(24, 108, 254) solid;
+}
+
+.wrapper-button {
+    text-align: center;
+}
+.face.smile {
+    border: 20px solid #82b459;
+    background-color: #addb88;
+    transition: all 0.5s linear;
+}
+.face.sad {
+    border: 20px solid #e77071;
+    background-color: #ee9297;
+    transition: all 0.5s linear;
+}
+.face {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 20px solid #d8ad4e;
+    margin-bottom: 20px;
+    position: relative;
+    background: #d8ac4e82;
+    transition: all 0.5s linear;
+}
+.face.smile > .mouth {
+    background-color: #82b459;
+    border-radius: 50%;
+    height: 60px;
+}
+.face.sad > .mouth {
+    background-color: #e77071;
+    border-radius: 50%;
+    height: 60px;
+}
+
+.face.smile > .mouth::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #addb88;
+    bottom: 50%;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+}
+.face.sad > .mouth::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #ee9297;
+    top: 50%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+.mouth {
+    width: 200px;
+    height: 40px;
+    border-radius: 99px;
+    background: #d8ad4e;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.face.smile > .eye {
+    background-color: #82b459;
+}
+.face.sad > .eye {
+    background-color: #e77071;
+}
+.eye {
+    background: #d8ad4e;
+}
+.eye::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: inherit;
+    top: 28%;
+    left: 22%;
+    border-radius: 50%;
+}
+.eye::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: inherit;
+    top: 28%;
+    right: 22%;
+    border-radius: 50%;
+}
